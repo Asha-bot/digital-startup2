@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Digital Startup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Get started with HTML, CSS and JavaScript">
+    <meta name="author" content="Rasmus Cederdorff">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onhashchange="pageChange()">
+    <!-- tabbar navigation -->
+    <nav class="tabbar">
+        <a href="#datasite">
+            Tilføj
+        </a>
+        <a href="#home">
+            Pokemons
+        </a>
+
+    </nav>
+
+    <!-- Vue App Start -->
+
+    <section id="home" class="page">
+        <div id="app">
+            <img src="img/pokemonlogo.png" alt="Pokemon logo" width=100%>
+            <section class="grid-container">
+
+                <article v-for="post in posts">
+                    <div class="kant">
+                        <div class="post">
+                            <img v-bind:src="post.img">
+                            <h3>{{post.navn}}</h3>
+                            {{post.kategori}}<br>
+                            {{post.kampstil}} <br>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </section>
+
+    <section id="datasite" class="page">
+        <div id="app">
+            <input v-model="newPost.navn" placeholder="Navn">
+            <input v-model="newPost.kampstil" placeholder="Kampstil">
+            <input v-model="newPost.kategori" placeholder="Kategori">
+            <input v-model="newPost.img" placeholder="Image Url">
+            <button type="button" v-on:click="addNewPost">Add Post</button>
+
+        </div><!-- Vue App End -->
+    </section>
+
+    <!-- Vue.js, development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- main js file -->
+    <script src="js/main.js"></script>
+    <script src="js/spa.js"></script>
+</body>
+
+</html>

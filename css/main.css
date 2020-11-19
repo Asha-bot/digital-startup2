@@ -1,0 +1,137 @@
+/* ---------- root variables ---------- */
+:root {
+  --green: #003A70;
+  --light-green: #3D7DCA;
+  --light-grey: #f1f1f4;
+  --text-color-light: #fff;
+  --text-color-dark: #333;
+  --text-color-yellow: #FFCB05;
+}
+
+/* ---------- general styling ---------- */
+html {
+  color: var(--text-color-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* nav */
+.tabbar {
+  background-color: var(--green);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-green);
+  text-align: center;
+  width: 32.7%;
+  height: 14%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+/* ---------- input form styling ---------- */
+input {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  display: block;
+}
+
+button {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1em;
+  border-radius: 0;
+  color: var(--text-color-light);
+  background-color: var(--green);
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ---------- Grid container ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px;
+}
+
+.post{
+    background: #003A70;
+    border-radius: 15px;
+}
+
+.kant{
+    background-color: var(--text-color-yellow);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+.grid-container>article {
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-container>article img {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 1em;
+}
