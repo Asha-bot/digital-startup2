@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Digital Startup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Get started with HTML, CSS and JavaScript">
-    <meta name="author" content="Rasmus Cederdorff">
+    <meta name="description" content="Pokemons">
+    <meta name="author" content="Asha Mathyalakan">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -25,7 +25,7 @@
     <!-- Vue App Start -->
 
     <section id="home" class="page">
-        <div id="app">
+        <!--<div id="app">
             <img src="img/pokemonlogo.png" alt="Pokemon logo" width=100%>
             <section class="grid-container">
 
@@ -41,18 +41,38 @@
                 </article>
 
             </section>
+        </div>-->
+        <div id="app">
+            <h1>Teachers</h1>
+            <section class="grid-container">
+                <article v-for="teacher in teachers">
+                    <img v-bind:src="teacher.img">
+                    <h3>{{teacher.name}}</h3>
+                    {{teacher.position}} <br>
+                    <a v-bind:href="'mailto:'+teacher.mail">{{teacher.mail}}</a>
+                </article>
+            </section>
         </div>
     </section>
 
     <section id="datasite" class="page">
+        <!--  <div id="app">
+        <input v-model="newPost.navn" placeholder="Navn">
+        <input v-model="newPost.kampstil" placeholder="Kampstil">
+        <input v-model="newPost.kategori" placeholder="Kategori">
+        <input v-model="newPost.img" placeholder="Image Url">
+        <button type="button" v-on:click="addNewPost">Add Post</button>
+
+    </div> -->
         <div id="app">
-            <input v-model="newPost.navn" placeholder="Navn">
-            <input v-model="newPost.kampstil" placeholder="Kampstil">
-            <input v-model="newPost.kategori" placeholder="Kategori">
-            <input v-model="newPost.img" placeholder="Image Url">
-            <button type="button" v-on:click="addNewPost">Add Post</button>
+            <input v-model="newTeacher.name" placeholder="Name">
+            <input v-model="newTeacher.mail" placeholder="Mail">
+            <input v-model="newTeacher.position" placeholder="Position">
+            <input v-model="newTeacher.img" placeholder="Image Url">
+            <button type="button" v-on:click="addNewTeacher">Add Teacher</button>
 
         </div><!-- Vue App End -->
+
     </section>
 
     <!-- Vue.js, development version, includes helpful console warnings -->

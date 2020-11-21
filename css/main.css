@@ -16,6 +16,7 @@ html {
   width: 100%;
   font-weight: 200;
   text-align: center;
+  
 }
 
 /* nav */
@@ -93,6 +94,7 @@ button {
   background-color: var(--green);
   width: 100%;
   max-width: 300px;
+    margin-bottom: 300px;
 }
 
 /* ---------- Grid container ---------- */
